@@ -1,0 +1,12 @@
+#yt-enhancer-notification {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+video {
+  transition: filter 0.3s ease;
+}
+
+.ytp-large-width-mode {
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Super Enhancer</title>
+  <style>
+    @font-face {
+      font-family: 'Segoe UI Emoji';
+      src: local('Segoe UI Emoji');
+    }
+  </style>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-left">
+        <svg class="logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FF0000"/>
+        </svg>
+        <h1>YouTube Super Enhancer</h1>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="toggleAll" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="content">
+      <div class="features-list">
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+          </svg>
+          <div class="feature-info">
+            <div class="feature-title" data-en="Block Auto-Mix/Radio" data-vi="Chặn Auto-Mix/Radio">Chặn Auto-Mix/Radio</div>
+            <div class="feature-desc" data-en="Auto remove Mix playlists" data-vi="Tự động loại bỏ playlist Mix tự động">Tự động loại bỏ playlist Mix tự động</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="blockAutoMix" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 2l4 4-4 4M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4M21 13v1a4 4 0 0 1-4 4H3"/>
+          </svg>
+          <div class="feature-info">
+            <div class="feature-title" data-en="Loop Video" data-vi="Loop Video">Loop Video</div>
+            <div class="feature-desc" data-en="Auto loop video (Shift+L)" data-vi="Phát lặp lại video tự động (Shift+L)">Phát lặp lại video tự động (Shift+L)</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="loopVideo">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/>
+            <polyline points="17 2 12 7 7 2"/>
+          </svg>
+          <div class="feature-info">
+            <div class="feature-title" data-en="Theater Mode Auto" data-vi="Theater Mode Auto">Theater Mode Auto</div>
+            <div class="feature-desc" data-en="Auto enable theater mode" data-vi="Tự động bật chế độ rạp khi xem video">Tự động bật chế độ rạp khi xem video</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="theaterMode">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <rect x="8" y="21" width="8" height="4" rx="1" ry="1" opacity="0.5"/>
+            <polyline points="13 3 13 8 17 8" stroke-width="2.5"/>
+          </svg>
+          <div class="feature-info">
+            <div class="feature-title" data-en="Picture-in-Picture" data-vi="Picture-in-Picture">Picture-in-Picture</div>
+            <div class="feature-desc" data-en="Hotkey Alt+P for quick PiP" data-vi="Hotkey Alt+P để bật PiP nhanh">Hotkey Alt+P để bật PiP nhanh</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="pipHotkey" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item volume-feature" id="volumeFeature">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            <path d="M19 5a9 9 0 0 1 0 14"/>
+          </svg>
+          <div class="feature-info">
+            <div class="feature-title" data-en="Volume Booster" data-vi="Volume Booster">Volume Booster</div>
+            <div class="feature-desc" data-en="Boost volume up to 300%" data-vi="Tăng âm lượng tối đa lên 300%">Tăng âm lượng tối đa lên 300%</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="volumeBooster" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        
+        <div class="volume-slider-container" id="volumeSliderContainer" style="display: none;">
+          <div class="volume-slider-wrapper">
+            <span class="volume-label">0%</span>
+            <input type="range" id="volumeSlider" min="0" max="300" value="100" step="10" class="volume-range">
+            <span class="volume-label">300%</span>
+          </div>
+          <div class="volume-value" id="volumeValue">100%</div>
+        </div>
+
+        <div class="feature-item volume-feature" id="volumeFeature">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <div class="feature-info">
+            <div class="feature-title" data-en="Quick Timestamps" data-vi="Quick Timestamps">Quick Timestamps</div>
+            <div class="feature-desc" data-en="Quick jump: 1-9 to jump 10%-90%" data-vi="Nhảy nhanh: 1-9 để nhảy tới 10%-90%">Nhảy nhanh: 1-9 để nhảy tới 10%-90%</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="quickTimestamps" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="footer-actions">
+        <a href="https://buymeacoffee.com/quocthai" target="_blank" class="coffee-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="coffee-icon">
+            <path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/>
+          </svg>
+          <span data-en="Buy me a coffee" data-vi="Ủng hộ tôi">Ủng hộ tôi</span>
+        </a>
+        <button class="lang-switcher" id="langSwitcher">
+          <svg class="flag-icon" id="currentFlag" viewBox="0 0 36 36" fill="none">
+            <path fill="#DA251D" d="M32 5H4a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"/>
+            <path fill="#FFCD05" d="m18 11.5 1.8 5.6h5.9l-4.8 3.4 1.8 5.6-4.7-3.4-4.7 3.4 1.8-5.6-4.8-3.4h5.9z"/>
+          </svg>
+          <span class="lang-text" id="langText">VI</span>
+        </button>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p data-en="Version 3.0.0 • 6 Features" data-vi="Phiên bản 3.0.0 • 6 Tính năng">Phiên bản 3.0.0 • 6 Tính năng</p>
+        <a href="https://github.com/quocthai0404" target="_blank" class="developer-link">
+          <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+          <span class="github-username">quocthai0404</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
