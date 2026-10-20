@@ -48,7 +48,7 @@ Click the extension icon in your toolbar to:
 This extension:
 - Only runs on YouTube.com
 - Does NOT collect or transmit any user data
-- All settings are stored locally in your browser
+- Preferences are stored with Chrome's storage API (and may sync through Chrome Sync if you enable it)
 - No external API calls except to YouTube itself
 
 ## Support

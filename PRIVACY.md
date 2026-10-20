@@ -1,6 +1,6 @@
 # Privacy Policy for YouTube Super Enhancer
 
-Last updated: November 15, 2025
+Last updated: October 20, 2026
 
 ## Data Collection
 
@@ -8,16 +8,12 @@ YouTube Super Enhancer does NOT collect, store, or transmit any personal informa
 
 ## Data Storage
 
-All extension settings are stored locally in your browser using Chrome's storage API. This includes:
+Extension preferences are stored using Chrome's storage API. This includes:
 - Feature toggle states (on/off)
 - Volume level preference
 - Language preference
 
-This data:
-- Never leaves your device
-- Is not transmitted to any server
-- Is not accessible to the developer
-- Can be cleared by removing the extension
+This data is never sent to the developer or to a third-party service. If Chrome Sync is enabled for your browser profile, Chrome may synchronize these preferences across your signed-in devices under Google's privacy policy. You can clear the data by removing the extension.
 
 ## Permissions Used
 
@@ -25,8 +21,7 @@ The extension requires the following permissions:
 
 - **tabs**: To detect when you're on YouTube and apply features
 - **storage**: To save your preferences locally
-- **webNavigation**: To handle YouTube's single-page application navigation
-- **host_permissions (youtube.com)**: To run content scripts on YouTube pages only
+- **host_permissions (*.youtube.com)**: To run content scripts on YouTube pages only
 
 ## Third-Party Services
 
