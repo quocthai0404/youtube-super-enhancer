@@ -4,7 +4,8 @@ const features = {
   theaterMode: { id: 'theaterMode', default: false },
   pipHotkey: { id: 'pipHotkey', default: true },
   volumeBooster: { id: 'volumeBooster', default: true },
-  quickTimestamps: { id: 'quickTimestamps', default: true }
+  quickTimestamps: { id: 'quickTimestamps', default: true },
+  playbackSpeedHotkeys: { id: 'playbackSpeedHotkeys', default: false }
 };
 
 chrome.storage.sync.get(['volumeLevel'], (result) => {

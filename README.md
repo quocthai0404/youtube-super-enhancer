@@ -1,10 +1,12 @@
 # YouTube Super Enhancer
 
-Enhance your YouTube experience with 6 powerful features!
+Enhance your YouTube experience with 7 powerful features!
 
 ## Features
 
 🚫 **Block Auto-Mix/Radio** - Automatically removes auto-generated Mix playlists
+
+The Mix cleanup uses a history-safe redirect: after opening a Mix video, the browser **Back** button returns to the previous page normally.
 
 🔁 **Loop Video** - Loop videos automatically with Shift+L hotkey
 
@@ -15,6 +17,8 @@ Enhance your YouTube experience with 6 powerful features!
 🔊 **Volume Booster** - Boost volume up to 300% with +/- keys
 
 ⏱️ **Quick Timestamps** - Jump to 10%-90% of video using 1-9 keys
+
+⏩ **Playback Speed** - Change speed by 0.25× with Alt+[ and Alt+]
 
 ## Installation
 
@@ -37,6 +41,7 @@ Click the extension icon in your toolbar to:
 - **Alt+P**: Enable Picture-in-Picture
 - **+/-**: Increase/decrease volume (with Volume Booster enabled)
 - **1-9**: Jump to 10%-90% of video
+- **Alt+[ / Alt+]**: Decrease/increase playback speed by 0.25×
 
 ## Privacy
 

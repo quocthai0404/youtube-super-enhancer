@@ -1,12 +1,11 @@
 {
   "manifest_version": 3,
   "name": "YouTube Super Enhancer",
-  "version": "3.0.0",
-  "description": "6 tính năng: Chặn Auto-Mix, Loop Video, Theater Mode Auto, Picture-in-Picture, Volume Booster 300%, Timestamps",
+  "version": "3.1.0",
+  "description": "7 tính năng: chặn Auto-Mix, loop, theater, PiP, volume booster, timestamps và playback speed",
   "permissions": [
     "tabs",
-    "storage",
-    "webNavigation"
+    "storage"
   ],
   "host_permissions": [
     "*://*.youtube.com/*"
